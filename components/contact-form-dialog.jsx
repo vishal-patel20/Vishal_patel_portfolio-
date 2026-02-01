@@ -25,6 +25,8 @@ export function ContactFormDialog({ isOpen, onClose }) {
         setIsSubmitting(true);
         setSubmitStatus(null);
 
+        console.log("📤 Submitting contact form...", formData);
+
         try {
             const response = await fetch("/api/contact", {
                 method: "POST",
@@ -34,9 +36,13 @@ export function ContactFormDialog({ isOpen, onClose }) {
                 body: JSON.stringify(formData),
             });
 
+            console.log("📥 Response status:", response.status);
+
             const data = await response.json();
+            console.log("📥 Response data:", data);
 
             if (response.ok) {
+                console.log("✅ Form submitted successfully!");
                 setSubmitStatus("success");
                 setFormData({ name: "", email: "", subject: "", message: "" });
                 setTimeout(() => {
@@ -44,10 +50,13 @@ export function ContactFormDialog({ isOpen, onClose }) {
                     setSubmitStatus(null);
                 }, 2000);
             } else {
+                console.error("❌ Form submission failed:", data);
                 setSubmitStatus("error");
             }
         } catch (error) {
-            console.error("Error submitting form:", error);
+            console.error("❌ Error submitting form:", error);
+            console.error("Error name:", error.name);
+            console.error("Error message:", error.message);
             setSubmitStatus("error");
         } finally {
             setIsSubmitting(false);

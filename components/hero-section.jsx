@@ -109,6 +109,7 @@ export function HeroSection() {
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     priority
+                                    sizes="(max-width: 768px) 256px, (max-width: 1024px) 288px, 320px"
                                 />
                                 {/* Overlay on hover */}
                                 <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

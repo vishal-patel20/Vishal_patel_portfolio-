@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const techCategories = [
     {
@@ -149,22 +150,34 @@ export function TechStackSection() {
                                                 <div className="relative w-12 h-12 mb-3 transition-transform duration-300 group-hover:scale-110">
                                                     {item.darkIcon ? (
                                                         <>
-                                                            <img
+                                                            <Image
                                                                 src={item.icon || "/placeholder.svg"}
                                                                 alt={item.name}
+                                                                width={48}
+                                                                height={48}
                                                                 className="w-full h-full object-contain dark:hidden"
+                                                                loading="lazy"
+                                                                unoptimized
                                                             />
-                                                            <img
+                                                            <Image
                                                                 src={item.darkIcon}
                                                                 alt={item.name}
+                                                                width={48}
+                                                                height={48}
                                                                 className="w-full h-full object-contain hidden dark:block"
+                                                                loading="lazy"
+                                                                unoptimized
                                                             />
                                                         </>
                                                     ) : (
-                                                        <img
+                                                        <Image
                                                             src={item.icon || "/placeholder.svg"}
                                                             alt={item.name}
+                                                            width={48}
+                                                            height={48}
                                                             className={`w-full h-full object-contain ${item.invert ? "dark:invert" : ""}`}
+                                                            loading="lazy"
+                                                            unoptimized
                                                         />
                                                     )}
                                                 </div>

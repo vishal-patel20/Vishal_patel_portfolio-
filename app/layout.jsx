@@ -8,25 +8,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata = {
     title: 'Full Stack Developer | FastAPI, MERN, AWS',
-    description: 'Results-driven Full Stack Developer with expertise in FastAPI, Python, MongoDB, MERN Stack, SQL, and AWS. Building scalable solutions that deliver exceptional user experiences.',
+    description: 'Results-driven Full Stack Developer with expertise in FastAPI, Python, MongoDB, MERN Stack, SQL, and AWS. Building scalable solutions that deliver exceptional user experiences.'
 
-    icons: {
-        icon: [
-            {
-                url: '/icon-light-32x32.png',
-                media: '(prefers-color-scheme: light)',
-            },
-            {
-                url: '/icon-dark-32x32.png',
-                media: '(prefers-color-scheme: dark)',
-            },
-            {
-                url: '/icon.svg',
-                type: 'image/svg+xml',
-            },
-        ],
-        apple: '/apple-icon.png',
-    },
+  
 }
 
 export default function RootLayout({ children }) {

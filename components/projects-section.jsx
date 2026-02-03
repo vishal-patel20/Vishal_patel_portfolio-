@@ -17,7 +17,7 @@ const projects = [
         ],
         highlight: "Full MERN stack application demonstrating end-to-end web development skills.",
         links: {
-            demo: "#", // Add your live demo URL here
+            demo: "https://vishal-patel-blogingweb-wfct.vercel.app/", // Add your live demo URL here
             github: "https://github.com/vishal-patel20/Vishal_patel_Blogingweb", // Add your GitHub repo URL here
         },
     },
@@ -49,7 +49,7 @@ const projects = [
         ],
         highlight: "Demonstrates backend development expertise with Python and FastAPI framework.",
         links: {
-            demo: "#", // Add your live demo URL here
+            demo: "https://vishal-patel-portfolio-kfo3.vercel.app/#", // Add your live demo URL here
             github: "https://github.com/vishal-patel20/Vishal_patel_portfolio-", // Add your GitHub repo URL here
         },
     },

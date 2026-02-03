@@ -17,8 +17,8 @@ const projects = [
         ],
         highlight: "Full MERN stack application demonstrating end-to-end web development skills.",
         links: {
-            demo: "https://your-blogging-app.vercel.app", // Add your live demo URL here
-            github: "https://github.com/yourusername/blogging-app", // Add your GitHub repo URL here
+            demo: "#", // Add your live demo URL here
+            github: "https://github.com/vishal-patel20/Vishal_patel_Blogingweb", // Add your GitHub repo URL here
         },
     },
     {
@@ -33,8 +33,8 @@ const projects = [
         ],
         highlight: "Showcases advanced frontend skills with modern animation libraries and design systems.",
         links: {
-            demo: "https://k72-website.vercel.app", // Add your live demo URL here
-            github: "https://github.com/yourusername/k72-website", // Add your GitHub repo URL here
+            demo: "https://k72-clone-5965.vercel.app/", // Add your live demo URL here
+            github: "https://github.com/vishal-patel20/k72-clone-", // Add your GitHub repo URL here
         },
     },
     {
@@ -49,8 +49,8 @@ const projects = [
         ],
         highlight: "Demonstrates backend development expertise with Python and FastAPI framework.",
         links: {
-            demo: "https://your-portfolio-fastapi.vercel.app", // Add your live demo URL here
-            github: "https://github.com/yourusername/portfolio-fastapi", // Add your GitHub repo URL here
+            demo: "#", // Add your live demo URL here
+            github: "https://github.com/vishal-patel20/Vishal_patel_portfolio-", // Add your GitHub repo URL here
         },
     },
     {
@@ -65,8 +65,8 @@ const projects = [
         ],
         highlight: "Demonstrates fundamental JavaScript skills and game logic implementation.",
         links: {
-            demo: "https://your-tictactoe.vercel.app", // Add your live demo URL here
-            github: "https://github.com/yourusername/tictactoe-game", // Add your GitHub repo URL here
+            demo: "https://vishal-patel20.github.io/Tic-Tac-Toe-Game/", // Add your live demo URL here
+            github: "https://github.com/vishal-patel20/Tic-Tac-Toe-Game", // Add your GitHub repo URL here
         },
     },
     {
@@ -81,8 +81,8 @@ const projects = [
         ],
         highlight: "Fun project showcasing DOM manipulation and event handling in JavaScript.",
         links: {
-            demo: "https://your-rps-game.vercel.app", // Add your live demo URL here
-            github: "https://github.com/yourusername/stone-paper-scissors", // Add your GitHub repo URL here
+            demo: "https://vishal-patel20.github.io/stone-paper-scissors/", // Add your live demo URL here
+            github: "https://github.com/vishal-patel20/stone-paper-scissors", // Add your GitHub repo URL here
         },
     },
 ];

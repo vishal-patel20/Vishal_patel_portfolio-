@@ -7,11 +7,17 @@ import { existsSync } from "fs";
 const STORAGE_DIR = join(process.cwd(), "data");
 const CONTACTS_FILE = join(STORAGE_DIR, "contacts.json");
 
-// Try MongoDB, fallback to file storage
+// Try MongoDB, fallback to file storage (only in development)
 async function saveContact(contactData) {
     // Try MongoDB first
     try {
         console.log("🔌 Attempting MongoDB connection...");
+
+        // Check if MONGODB_URI is set
+        if (!process.env.MONGODB_URI) {
+            throw new Error("MONGODB_URI environment variable is not set");
+        }
+
         const clientPromise = (await import("@/lib/mongodb")).default;
         const client = await clientPromise;
         const db = client.db("portfolio");
@@ -23,10 +29,17 @@ async function saveContact(contactData) {
 
         return { success: true, storage: "mongodb", id: result.insertedId };
     } catch (mongoError) {
-        console.warn("⚠️ MongoDB failed, using file storage fallback");
-        console.warn("MongoDB error:", mongoError.message);
+        console.error("❌ MongoDB error:", mongoError.message);
 
-        // Fallback to file storage
+        // Only use file storage fallback in development
+        if (process.env.NODE_ENV === "production") {
+            console.error("❌ Production environment requires MongoDB. File storage is not available.");
+            throw new Error("Database connection failed. Please contact the administrator.");
+        }
+
+        console.warn("⚠️ MongoDB failed, using file storage fallback (development only)");
+
+        // Fallback to file storage (development only)
         try {
             // Ensure data directory exists
             if (!existsSync(STORAGE_DIR)) {
